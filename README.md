@@ -7,3 +7,4 @@
 6) Start the server using "python manage.py runserver"
 7) Trial
 8)rashmi blunga
+9) smita balunga
