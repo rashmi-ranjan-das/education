@@ -6,3 +6,4 @@
 5) Run "python manage.py migrate"
 6) Start the server using "python manage.py runserver"
 7) Trial
+8)rashmi blunga
