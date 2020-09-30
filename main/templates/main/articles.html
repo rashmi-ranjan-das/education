@@ -1,0 +1,233 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3 section2">
+    <h1>Articles</h1>
+</div>
+<div class="container mt-4 mb-4">
+    <div class="container mt-3">
+        <br>
+        <ul class="nav nav-tabs reset-nav">
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu1">Python</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu2">C++</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu3">ML/AI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu4">WebDev</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active"><br>
+            <h3>Welcome to the Articles Section</h3>
+            <p>Here You will Get to know about the different fields/career paths that you can chose for yourself. Just click on above mentioned topics to toggle.</p>
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+             <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Python: Introduction</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'python1' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">More About Python</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'python2' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Roadmap to Become Python Developer</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'python3' %}""><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+            <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">C++: Introduction</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'c++1' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">More About C++</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'c++2' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Roadmap to Become C++ Developer</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'c++3' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div id="menu3" class="container tab-pane fade"><br>
+            <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Machine Learning: Introduction</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'ml1' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">More About Machine Learning</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'ml2' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Roadmap to Become Data Scientist</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'ml3' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div id="menu4" class="container tab-pane fade"><br>
+            <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Web Development: Introduction</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'web1' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">More About Web Development</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'web2' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2019/10/python-1.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Roadmap to Become Web Developer</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div style="text-align: center;">
+                        <a href="{% url 'web3' %}"><div class="btn btn-primary">Read More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}

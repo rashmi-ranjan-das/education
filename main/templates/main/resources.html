@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container mt-3 section2">
+    <h1>Resources</h1>
+</div>
+<div class="container mt-4 mb-4">
+    <div class="container mt-3">
+        <br>
+        <ul class="nav nav-tabs reset-nav">
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu1">Python</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu2">C++</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu3">ML/AI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu4">Others</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active"><br>
+            <h3>Welcome to the Resources Section</h3>
+            <p>Here You will Get all Kinds of resources as per your needs. Just clink on above mentioned topics to toggle.</p>
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+            {% for python in pythons %}
+                <ul>
+                    <a href={{python.link}}><li>Python Tutorial For Begginers (Book)</li></a>
+                </ul>
+            {% endfor %}
+          </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+            {% for ele in cplusplus %}
+                <ul>
+                    <a href={{ele.link}}><li>{{ele.name}}</li></a>
+                </ul>
+            {% endfor %}
+          </div>
+          <div id="menu3" class="container tab-pane fade"><br>
+            {% for ele in mlai %}
+                <ul>
+                    <a href={{ele.link}}><li>{{ele.name}}</li></a>
+                </ul>
+            {% endfor %}
+          </div>
+          <div id="menu4" class="container tab-pane fade"><br>
+            <h3>Menu 4</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
