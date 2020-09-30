@@ -5,3 +5,4 @@
 4) go to root directory and run "python manage.py makemigrations"
 5) Run "python manage.py migrate"
 6) Start the server using "python manage.py runserver"
+7) Trial
