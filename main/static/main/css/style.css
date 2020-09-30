@@ -263,6 +263,11 @@ svg{
     color: darkblue;
 }
 /*-----------------mobile-view----------------------*/
+@media only screen and (max-width: 1124px){
+  .nav{
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 992px){
     nav{
         height: 6rem;
