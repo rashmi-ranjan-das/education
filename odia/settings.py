@@ -51,7 +51,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'odia.urls'
-EMAIL_HOST_PASSWORD = 'mamapua12@'
 
 TEMPLATES = [
     {
