@@ -38,5 +38,6 @@ urlpatterns = [
     path('articles/mlai/i1003', views.mli1003, name='ml3'),
     path('articles/webdev/i1001', views.webi1001, name='web1'),
     path('articles/webdev/i1002', views.webi1002, name='web2'),
-    path('articles/webdev/i1003', views.webi1003, name='web3')
+    path('articles/webdev/i1003', views.webi1003, name='web3'),
+    path('contact/mail', views.mail, name="mail")
 ]
