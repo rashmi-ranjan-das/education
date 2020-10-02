@@ -1,4 +1,7 @@
 /*----------------general---------------*/
+h1{
+  color: black;
+}
 /*---------------------navbar---------------------*/
 nav{
     background-color:black;
@@ -132,7 +135,6 @@ svg{
     position: relative;
     border: 5px solid #fff;
   }
-  
   .card-01 .height-fix .card-img-overlay 
   {
     top: inherit;
@@ -302,6 +304,7 @@ svg{
         height: 6rem;
     }
 }
+
 @media only screen and (max-width: 768px){
     .icon-class{
         margin-bottom: 5%;
