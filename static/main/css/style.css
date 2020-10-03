@@ -1,7 +1,4 @@
 /*----------------general---------------*/
-h1{
-  color: #00378a;
-}
 /*---------------------navbar---------------------*/
 nav{
     background-color:black;
@@ -135,6 +132,7 @@ svg{
     position: relative;
     border: 5px solid #fff;
   }
+  
   .card-01 .height-fix .card-img-overlay 
   {
     top: inherit;
@@ -169,7 +167,6 @@ svg{
   
   .article-content {
     font-size: 1.3em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   .img-container {
@@ -305,7 +302,6 @@ svg{
         height: 6rem;
     }
 }
-
 @media only screen and (max-width: 768px){
     .icon-class{
         margin-bottom: 5%;
