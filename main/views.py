@@ -20,7 +20,8 @@ def resources(request):
     pythons = Python.objects.all()
     cplusplus = Cplusplus.objects.all()
     mlai = MLAI.objects.all()
-    return render(request, 'main/resources.html', {'pythons':pythons, 'cplusplus': cplusplus, 'mlai':mlai})
+    others = Books.objects.all()
+    return render(request, 'main/resources.html', {'pythons':pythons, 'cplusplus': cplusplus, 'mlai':mlai, "others":others})
 
 def articles(request): 
     return render(request, 'main/articles.html')

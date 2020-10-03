@@ -40,7 +40,7 @@
           <div id="menu1" class="container tab-pane fade"><br>
             {% for python in pythons %}
                 <ul>
-                    <a href={{python.link}}><li>Python Tutorial For Begginers (Book)</li></a>
+                    <a href={{python.link}}><li>{{python.name}}</li></a>
                 </ul>
             {% endfor %}
           </div>
@@ -59,8 +59,11 @@
             {% endfor %}
           </div>
           <div id="menu4" class="container tab-pane fade"><br>
-            <h3>Menu 4</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            {% for ele in others %}
+                <ul>
+                    <a href={{ele.link}}><li>{{ele.name}}</li></a>
+                </ul>
+            {% endfor %}
           </div>
         </div>
       </div>
