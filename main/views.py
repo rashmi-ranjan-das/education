@@ -97,3 +97,9 @@ def mail(request):
             return redirect("contact")
     else:
         return redirect("/contact")
+
+def failure(request):
+    return render(request, 'main/failure.html')
+
+def success(request):
+    return render(request, 'main/success.html')
