@@ -40,6 +40,5 @@ urlpatterns = [
     path('articles/webdev/i1002', views.webi1002, name='web2'),
     path('articles/webdev/i1003', views.webi1003, name='web3'),
     path('contact/mail', views.mail, name="mail"),
-    path('failure/', views.failure, name="failure"),
-    path('success/', views.success, name="success"),
+    path('donation/', views.donation, name="donation"),
 ]

@@ -2,6 +2,9 @@
 h1{
   color: #00378a;
 }
+.pm-button:hover{
+  color: black;
+}
 /*---------------------navbar---------------------*/
 nav{
     background-color:black;

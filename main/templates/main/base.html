@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     <style>
         .nav-link{
-            font-size: 1.2rem;
-            margin: 1.6%;
+            font-size: 1.1rem;
+            margin: 1.0%;
         }
     </style>
 </head>
@@ -33,10 +33,12 @@
                     <a class="nav-link" href="{% url 'articles' %}">Articles</a>
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    <a class="nav-link text-warning" href="{% url 'donation' %}"><b>Donate</b></a>
                 </div>
             </div>
         </div>
       </nav>
+      
       {% block content %}
 
       {% endblock %}
@@ -62,7 +64,7 @@
                         <p>
                           <i class="fas fa-envelope mr-3"></i>in.pathapadha@gmail.com</p>
                         <p>
-                          <i class="fas fa-phone mr-3"></i>+91-8249180488</p>
+                          <i class="fas fa-phone mr-3"></i>+91-8093430989 (Whatsapp)</p>
                 </div>
             </div>
         <hr>
