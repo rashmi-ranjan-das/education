@@ -98,5 +98,8 @@ def mail(request):
     else:
         return redirect("/contact")
 
+def exam(request):
+    return render(request, 'main/exam.html')
+
 def donation(request):
     return render(request, 'main/donation.html')
