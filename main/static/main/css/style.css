@@ -53,6 +53,8 @@ svg{
 .d-block{
     height: 39rem;
 }
+/*-----------------------About Us -------------------*/
+
 /*----------------------homepage-------------------*/
 .icons1{
     color: rgb(244, 248, 3);
@@ -295,8 +297,13 @@ svg{
     color: violet;
 }
 .linkedin:hover{
-    color: darkblue;
+    color: rgb(1, 46, 194);
 }
+a{
+  text-decoration: none;
+}
+/*-----------------------Homepage animation-------------------*/
+
 /*-----------------mobile-view----------------------*/
 @media only screen and (max-width: 1124px){
   .nav{
