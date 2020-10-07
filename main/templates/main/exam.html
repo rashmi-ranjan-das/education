@@ -2,11 +2,12 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-3 mb-3" style="text-align: center">
+
+<div class="container mt-3 mb-1" style="text-align: center">
     <h1>Practice and Exam</h1>
 </div>
-    <div class="container mt-4 mb-4">
-        <div class="container mt-3">
+    <div class="container mt-1 mb-4">
+        <div class="container">
             <br>
             <ul class="nav nav-tabs reset-nav">
               <li class="nav-item">
@@ -18,29 +19,41 @@
               <li class="nav-item">
                 <a class="nav-link reset-nav" data-toggle="tab" href="#menu3">HTML</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link reset-nav" data-toggle="tab" href="#menu4">Java</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-nav" data-toggle="tab" href="#menu5">Arduino(Robotics)</a>
+              </li>
             </ul>
             <div class="tab-content">
-              <div id="home" class="container tab-pane active"><br>
+              <div id="home" class="container-fluid tab-pane active"><br>
                 <h3>Welcome to the Practice Section</h3>
                 <div style="text-align: center;">
                   <p style="font-size: large;"><i>"Test You Knowledge and compare yourself with you. You are your own Competition"</i></p>
                 </div>
                 <p class="article-content">We believe there is no point of only learning new things unless you test your knowledge by giviing exams and testing yourself.</p>
-                <p class="article-content">Keeping this in mind, We have brought you <b>QUIZ EXAMS</b> to test your knowledge and skills. By giving these exams you can also know where you stand and how much clear your concepts are. </p>
+                <p class="article-content">Keeping this in mind, We have brought you <b>QUIZ EXAMS</b> to test your knowledge and skills. By giving these exams you can also know where you stand and how much clear your concepts are. <b>We have also provided you with online IDE to practice on your own. </b></p>
                 <div class="img-container mb-2" style="text-align: center;">
                   <img class="article-img" style="height: 70%;" src="https://wallpaperaccess.com/full/1397721.jpg" alt="1001">
                 </div>
                 <p class="article-content">Browse through the above categories and start giving the exams.</p>
               </div>
               <div id="menu1" class="container tab-pane fade"><br>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li>
-                    <li class="list-group-item article-content">Python Theory MCQ 2<a href="https://www.tryinteract.com/share/quiz/5f7ace0bb401c4001446fd2b" style="float: right;">Test Yourself</a></li>
-                    <li class="list-group-item article-content">Python Output MCQ</li>
-                    <li class="list-group-item article-content">Python Error Finding MCQ</li>
-                </ul>
+                <div>
+                  <iframe src="https://trinket.io/embed/python3/f066802f75" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li>
+                        <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li>
+                        <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li>
+                        <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li>
+                        <li class="list-group-item article-content"><div class='goconqr-popup-embed' data-id='26367928' data-type='quizzes'></div><script type='text/javascript' src='https://cdn.goconqr.com/embed.min.js'></script></li> 
+                    </ul>
               </div>
+              
               <div id="menu2" class="container tab-pane fade"><br>
+                <p class="article-content"><b>Want to practice C++ ? Visit: <a href="https://www.tutorialspoint.com/compile_cpp_online.php">C++ Online IDE</a></b></p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item article-content">C++ Theory MCQ 1</li>
                     <li class="list-group-item article-content">C++ Theory MCQ 2</li>
@@ -49,10 +62,21 @@
                   </ul>
               </div>  
               <div id="menu3" class="container tab-pane fade"><br>
+                <iframe src="https://trinket.io/embed/html/0ddc0fb049" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item article-content">HTML Theory MCQ 1</li>
-                    <li class="list-group-item article-content">HTML Theory MCQ 2</li>
+                    <li class="list-group-item article-content">HTML MCQ 1</li>
+                    <li class="list-group-item article-content">HTML MCQ 2</li>
                   </ul>
+              </div>
+              <div id="menu4" class="container tab-pane fade"><br>
+                <iframe src="https://trinket.io/embed/java/bd2b9ff968" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+              </div>
+              <div id="menu5" class="container tab-pane fade"><br>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item article-content">Arduino MCQ 1</li>
+                  <li class="list-group-item article-content">Arduino MCQ 2</li>
+                </ul>
+                
               </div>
             </div>
           </div>
