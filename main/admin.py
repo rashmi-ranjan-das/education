@@ -19,4 +19,4 @@ class MLAIAdmin(admin.ModelAdmin):
 
 @admin.register(Reviews)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email', 'city', 'review', 'rating')
+    list_display = ('id', 'name', 'email', 'city', 'review', 'rating', 'time')

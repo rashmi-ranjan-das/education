@@ -3,6 +3,7 @@ from .models import Books, Python, Cplusplus, MLAI, Reviews
 from django.core.mail import send_mail
 import random
 from django.contrib import messages
+from datetime import datetime
 # Create your views here.
 def home(request):
     return render(request, 'main/home.html')
@@ -106,7 +107,9 @@ def donation(request):
 
 def review_page(request):
     reviews = Reviews.objects.order_by('-id')
-    return render(request, 'main/reviews.html', {'reviews':reviews})
+    top_reviews = Reviews.objects.filter(rating=5)[0:2]
+    latest_reviews = Reviews.objects.order_by('-time')[0:3]
+    return render(request, 'main/reviews.html', {'reviews':reviews, 'top_reviews':top_reviews, 'latest_reviews':latest_reviews})
 
 def review(request):
     if request.method == 'POST':
@@ -115,7 +118,7 @@ def review(request):
         city = request.POST['city']
         review = request.POST['review']
         rating = request.POST['rating']
-        r = Reviews(name=name, email=email,city=city, review=review, rating=rating)
+        time = datetime.now()
+        r = Reviews(name=name, email=email,city=city, review=review, rating=rating, time=time)
         r.save()
-        user_reviews = Reviews.objects.order_by('-id')
         return redirect('review_page')

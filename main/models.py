@@ -23,4 +23,5 @@ class Reviews(models.Model):
     city = models.CharField(max_length=30)
     review = models.CharField(max_length=500)
     rating = models.CharField(max_length=10)
+    time = models.DateTimeField()
 
