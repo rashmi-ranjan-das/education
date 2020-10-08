@@ -1,0 +1,103 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3 mb-3 section2" style="text-align: center">
+    <h1 style="color:  #00378a;">Your Reviews</h1>
+    <p class="article-content">Please Give your review by filling the form. As soon as you submit it will be shown below the review form at the first.</p>
+</div>
+<div class="container">
+        <div>
+            <h4 class="text-center">Review Form</h4>
+            <form method="post" action="review">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label"><b>Email</b></label>
+                    <div class="col-sm-10">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label"><b>Name</b></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="city" class="col-sm-2 col-form-label"><b>City</b></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="review" class="col-sm-2 col-form-label"><b>Review</b></label>
+                    <div class="col-sm-10">
+                        <textarea name="review" id="review" class="form-control" placeholder="Give your Review" style="height: 10rem;" required></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="review" class="col-sm-2 col-form-label"><b>Rating</b></label>
+                    <div class="col-sm-10">
+                        <input type="number" name="rating" id="review" class="form-control" placeholder="Out of 5" required>
+                    </div>
+                  </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  
+            </form>
+        </div>
+        <hr style="height:3px;border-width:1;color:black;background-color:black">
+        <div>
+            <div class="list-group">
+                {% for review in reviews %}
+                <div href="#" class="list-group-item list-group-item-action mt-2 mb-2">
+                  <div class="d-flex w-100 justify-content-between">
+                    <b class="mb-1" style="color: #00378a;">{{review.name}} <small>({{review.city}})</small></b>
+                    <span>
+                        {% if review.rating == '5' %}
+                            {% for i in 'abcde' %}
+                            <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            {% endfor %}
+                        {% endif %}
+                        {% if review.rating == '4' %}
+                            {% for i in 'abcd' %}
+                            <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            {% endfor %}
+                        {% endif %}
+                        {% if review.rating == '3' %}
+                            {% for i in 'abc' %}
+                            <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            {% endfor %}
+                        {% endif %}
+                        {% if review.rating == '2' %}
+                            {% for i in 'ab' %}
+                            <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            {% endfor %}
+                        {% endif %}
+                        {% if review.rating == '1' %}
+                            {% for i in 'a' %}
+                            <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            {% endfor %}
+                        {% endif %}
+                    </span>
+                  </div>
+                  <p class="mb-1">{{review.review}}</small>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+        </div>
+    
+</div>
+{% endblock %}

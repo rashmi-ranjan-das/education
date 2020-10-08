@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Books, Python, Cplusplus, MLAI
+from .models import Books, Python, Cplusplus, MLAI, Reviews
 from django.core.mail import send_mail
 import random
 from django.contrib import messages
@@ -103,3 +103,19 @@ def exam(request):
 
 def donation(request):
     return render(request, 'main/donation.html')
+
+def review_page(request):
+    reviews = Reviews.objects.order_by('-id')
+    return render(request, 'main/reviews.html', {'reviews':reviews})
+
+def review(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        city = request.POST['city']
+        review = request.POST['review']
+        rating = request.POST['rating']
+        r = Reviews(name=name, email=email,city=city, review=review, rating=rating)
+        r.save()
+        user_reviews = Reviews.objects.order_by('-id')
+        return redirect('review_page')

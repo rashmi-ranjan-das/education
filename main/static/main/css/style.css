@@ -88,9 +88,16 @@ svg{
     font-size: 14px;
   }
 
-.card {
-    box-shadow: 50px 50px 80px rgba(0, 0, 0, 0.3);
+.card {   
     margin-bottom: 30px;
+}
+.card:hover{
+   box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+   0 2px 4px rgba(0,0,0,0.07), 
+   0 4px 8px rgba(0,0,0,0.07), 
+   0 8px 16px rgba(0,0,0,0.07),
+   0 16px 32px rgba(0,0,0,0.07), 
+   0 80px 80px rgba(0,0,0,0.07);
 }
 .card-01 .card-body {
     position: relative;
@@ -313,6 +320,7 @@ a{
 @media only screen and (min-width: 992px){
     nav{
         height: 6rem;
+        font-family: cursive;
     }
 }
 
