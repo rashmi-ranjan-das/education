@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="https://res.cloudinary.com/pathapadha-in/image/upload/v1602358726/Resources/Logo_abf0t5.png" type="image/icon type">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block header %}
@@ -15,21 +16,30 @@
         .nav-link{
             font-size: 0.9rem;
             font-weight: 500;
-            margin: 0.2%;
+            margin: 0.15%;
+        }
+        .nav-link:hover{
+            color: #51ffc5;
         }
         .home-image{
             display: inline-block;
             vertical-align: middle;
             height: 100%;
         }
-        
+        .logo{
+            color: #51ffc5;
+            font-size: 1.5rem;
+        }
+        .logo:hover{
+            color: #51ffc5;
+        }
     </style>
     <script>(function(w, d) { w.CollectId = "5f7a12a20f65cb31086fdf11"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand logo" href="/">PathaPadha.in</a>
+            <a class="navbar-brand logo ml-3" href="/">PathaPadha.in</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;">
                     <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -37,7 +47,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-
                     <a class="nav-link active" href="/">Home</a>
                     <a class="nav-link" href="{% url 'explore' %}">Explore</a>
                     <a class="nav-link" href="{% url 'exam' %}">Practice</a>
@@ -59,18 +68,18 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Description</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: #51ffc5">Description</h5>
                 <p>An Initiative for the Advancement of Technical Skills of Students of Odisha by Teaching them Coding in Our Native Language.</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4">
-                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%;">PathaPadha.in</h5>
-                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%;">ପାଠପଢା.in</h5>
+                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">PathaPadha.in</h5>
+                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">ପାଠପଢା.in</h5>
                     <h5 class="font-weight-bold text-uppercase">Help us grow by donating</h5>
                     <a href="{% url 'donation' %}"><div class="btn btn-success btn-lg">Donate Us</div></a>
                     <a href="https://onboarding.payumoney.com/app/account?partner_name=PathaPadha&partner_source=Affiliate+Links&partner_uuid=11eb-05c0-781afeca-a81b-0a696b110fde&source=Partner" target="_blank"><img width="100px" height="100px" src="https://partner.payu.in/packs/_/assets/images/icons/certified-partner-ce70c676cc844c678e8a6e7e373e6c0d.png" /></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4" style="text-align: center;">
-                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: #51ffc5">Contact</h5>
                         <p>
                           <i class="fas fa-home mr-3"></i>Bhubaneswar, Odisha , India</p>
                         <p>
