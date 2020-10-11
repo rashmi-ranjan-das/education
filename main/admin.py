@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Books, Python, Cplusplus, MLAI, Reviews
+from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino
 # Register your models here.
 @admin.register(Books)
 class BooksAdmin(admin.ModelAdmin):
@@ -15,6 +15,10 @@ class CplusplusAdmin(admin.ModelAdmin):
 
 @admin.register(MLAI)
 class MLAIAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'link')
+
+@admin.register(Arduino)
+class ArduinoAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'link')
 
 @admin.register(Reviews)

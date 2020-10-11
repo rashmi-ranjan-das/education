@@ -17,6 +17,10 @@ class MLAI(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=1000)
 
+class Arduino(models.Model):
+    name = models.CharField(max_length=50)
+    link = models.CharField(max_length=1000)
+
 class Reviews(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
