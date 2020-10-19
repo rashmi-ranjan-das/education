@@ -8,6 +8,7 @@
     {% block header %}
     <title>Learn Coding In Odia | Home</title>
     {% endblock %}
+    <script src="//cdn.wordart.com/wordart.min.js" async defer></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -75,13 +76,16 @@
       {% block content %}
 
       {% endblock %}
+      <div class="container mt-3 mb-4 text-center">
+        <h3>Like Us? Give your honest reviews here :)<span><a href="{% url 'review_page' %}"><button class="btn btn-primary">Give Review</button></a></span></h3>
+    </div>
  <div class="container-fluid footer" style="background-color: black; color: white">
     <footer class="page-footer font-small stylish-color-dark pt-4">
         <div class="container text-center">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: #51ffc5">Description</h5>
-                <p>An Initiative for the Advancement of Technical Skills of Students of Odisha by Teaching them Coding in Our Native Language.</p>
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: #51ffc5">Description</h5>
+                    <p>An Initiative for the Advancement of Technical Skills of Students of Odisha by Teaching them Coding in Our Native Language.</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">PathaPadha.in</h5>
