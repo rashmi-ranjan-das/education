@@ -197,6 +197,9 @@ svg{
     font-size: 1.1em;
     font-weight: 450;
   }
+  .article-main-img{
+    margin: 5%;
+  }
   
   /*-------------------------------flipper-card-----------------------------*/
   .card-flipper {
