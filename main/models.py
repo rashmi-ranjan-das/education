@@ -29,3 +29,7 @@ class Reviews(models.Model):
     rating = models.CharField(max_length=10)
     time = models.DateTimeField()
 
+class Quotes(models.Model):
+    name = models.CharField(max_length=40)
+    quote = models.CharField(max_length=1000)
+

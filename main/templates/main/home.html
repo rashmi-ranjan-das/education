@@ -25,10 +25,19 @@
         </svg>
     </a>
   </div>
-<div class="container-fluid mt-1 mb-1 section2 text-center" style="padding:4%">
-    <h1 style="font-weight: 700; color: black">Starting Your Coding Journey? Join Us</h1><br>
-    <h1 style="font-weight: 1000; font-family:cursive" class="awesome">THE FIRST EVER ODIA E-LEARNING PLATFORM FOR FREE</h1><br>
-    <h1 style="font-weight:700; color: black">Your Journey, Our Responsibilty</h1>
+<div class="container-fluid section2 text-center" style="padding:4%;">
+  <h1 style="font-weight: 700; color: black">Presenting Before You Something Like Never Before</h1><br>
+    <hr style="height:3px;border-width:1;color:black;background-color:black"><br>
+    <h1 style="font-weight: 1000; font-family:sans-serif" class="awesome">THE FIRST EVER ODIA E-LEARNING PLATFORM FOR FREE</h1><br>
+    <hr style="height:3px;border-width:1;color:black;background-color:black"><br>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <h1 style="font-weight: 700; color: black">Your Journey, Our Responsibility</h1>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <h1 style="font-weight: 700; color: black">Dream It, Believe It and Build It</h1>
+      </div>
+    </div>
 </div>
 <div class="container-fluid section1">
 <div class="container mt-3">
@@ -69,27 +78,46 @@
   </div>
 </div>
 </div>
-<div class="container section2 mt-5 mb-5">
+<br>
+<div class="container section2 mt-3 mb-5">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-class" style="text-align: center;">
-            <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-laptop icons1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M13.5 3h-11a.5.5 0 0 0-.5.5V11h12V3.5a.5.5 0 0 0-.5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11z"/>
-                <path d="M0 12h16v.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5V12z"/>
-            </svg>
-            <h3 class="mt-2 article-subheading">15+ Courses</h3>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style="text-align: center;">
+          <h2>Quote of the Moment</h2>
+          <div class="card card-quote p-3 text-center mt-5" style="background-color: linen;">
+            <blockquote class="blockquote mb-0 card-body">
+              <p class="article-content">"{{quote.quote}}"</p>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                  <cite title="Source Title">-{{quote.name}}</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-class" style="text-align: center;">
-            <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-files icons2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/>
-                <path d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z"/>
-              </svg>
-              <h3 class="mt-2 article-subheading">100+ Resources</h3>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-class" style="text-align: center;">
-            <svg width="8em" height="8em" viewBox="0 0 16 16" class="bi bi-person-fill icons3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
-            <h3 class="mt-2 article-subheading">10+ Instructors</h3>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+          <h2 class="text-center">What Our Customers Say</h2>
+          <div class="list-group">
+              {% for review in reviews %}
+              <div href="#" class="list-group-item list-group-item-action mt-2 mb-2" style="background-color:lavender;">
+              <div class="d-flex w-100 justify-content-between">
+                  <b class="mb-1" style="color: #00378a;">{{review.name}} <small>({{review.city}})</small></b>
+                  <span>
+                      {% if review.rating == '5' %}
+                          {% for i in 'abcde' %}
+                          <svg style="color: 	#FFD700;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                          {% endfor %}
+                      {% endif %}
+                  </span>
+              </div>
+              <p class="mb-1">{{review.review}}</small>
+              </div>
+              {% endfor %}
+          </div>
+          <div class="text-center">
+            <a href="{% url 'review_page' %}"><div class="btn btn-primary">See More</div></a>
+          </div>
         </div>
     </div>
 </div>
@@ -325,7 +353,7 @@
         </div>
         <div class="container section2 mt-5 mb-5 mobile-article1">
             <div style="text-align: center;">
-                <h2>Our Top Resources</h2>
+                <h1>Our Top Resources</h1>
             </div>
             <div class="row mt-5 mb-5">
                 <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: center;">
@@ -368,7 +396,7 @@
         <!-- Mobile View For Articles -->
         <div class="container-fluid section2 mt-5 mb-5 mobile-article">
             <div style="text-align: center;">
-                <h2>Our Top Resources</h2>
+                <h1>Our Top Resources</h1>
             </div>
             <div class="row mt-5 mb-5">
                 <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: center;">

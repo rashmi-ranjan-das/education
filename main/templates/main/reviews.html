@@ -8,7 +8,7 @@
 {% block content %}
 <div class="container mt-3 mb-3 section2" style="text-align: center">
     <h1 style="color:  #00378a;">Your Reviews</h1>
-    <p class="article-content">Please Give your review by filling the form. As soon as you submit it will be shown below the review form at the first.</p>
+    <p class="article-content">Please Give your review by filling the form. As soon as you submit it will be shown in the Latest Reviews at the first.</p>
 </div>
 <div class="container">
         <div class="row">
@@ -57,7 +57,7 @@
                     <h4 class="text-center">Top Reviews</h4>
                     <div class="list-group">
                         {% for review in top_reviews %}
-                        <div href="#" class="list-group-item list-group-item-action mt-2 mb-2">
+                        <div href="#" class="list-group-item list-group-item-action mt-2 mb-2" style="background-color: seashell;">
                         <div class="d-flex w-100 justify-content-between">
                             <b class="mb-1" style="color: #00378a;">{{review.name}} <small>({{review.city}})</small></b>
                             <span>
@@ -79,7 +79,7 @@
                     <h4 class="text-center">Latest Reviews</h4>
                     <div class="list-group">
                         {% for review in latest_reviews %}
-                        <div href="#" class="list-group-item list-group-item-action mt-2 mb-2">
+                        <div href="#" class="list-group-item list-group-item-action mt-2 mb-2" style="background-color:seashell;">
                         <div class="d-flex w-100 justify-content-between">
                             <b class="mb-1" style="color: #00378a;">{{review.name}} <small>({{review.city}})</small></b>
                             <span>
@@ -131,7 +131,7 @@
             <h4 class="text-center">All Reviews</h4>
             <div class="list-group">
                 {% for review in reviews %}
-                <div href="#" class="list-group-item list-group-item-action mt-2 mb-2">
+                <div href="#" class="list-group-item list-group-item-action mt-2 mb-2" style="background-color:lavender;">
                   <div class="d-flex w-100 justify-content-between">
                     <b class="mb-1" style="color: #00378a;">{{review.name}} <small>({{review.city}})</small></b>
                     <span>

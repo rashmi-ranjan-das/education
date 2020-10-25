@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
-from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino
+from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes
 from django.core.mail import send_mail
 import random
 from django.contrib import messages
 from datetime import datetime
 # Create your views here.
 def home(request):
-    return render(request, 'main/home.html')
+    total = len(Quotes.objects.all())
+    r_id = random.randint(0,total-1) + 1
+    quote = Quotes.objects.get(pk=r_id)
+    top_reviews = Reviews.objects.filter(rating=5)[0:3]
+    return render(request, 'main/home.html', {'quote': quote, 'reviews':top_reviews})
 
 def about(request):
     return render(request, 'main/about.html')
@@ -71,7 +75,7 @@ def webi1003(request):
     return render(request, 'main/Articles/WebDev/1003.html')
 
 def mail(request):
-    persons = ['Bhabatosh Mohanta', 'Rashmi Ranjan Das', 'Smita Kumari Jha', 'Shovna Panda', 'Suman']
+    persons = ['Bhabatosh Mohanta', 'Rashmi Ranjan Das', 'Smita Kumari Jha', 'Shovna Panda', 'Suman Patra']
     num = random.randint(0,4)
     success = 1
     if request.method == 'POST':
