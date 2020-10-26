@@ -9,8 +9,15 @@ def home(request):
     total = len(Quotes.objects.all())
     r_id = random.randint(0,total-1) + 1
     quote = Quotes.objects.get(pk=r_id)
+    all_review = Reviews.objects.all()
+    rating = 0
+    for ele in all_review:
+        rating = rating + int(ele.rating)
+    avg = rating/len(Reviews.objects.all())
+    avg = float("{:.2f}".format(avg))
+    number = len(Reviews.objects.all())
     top_reviews = Reviews.objects.filter(rating=5)[0:3]
-    return render(request, 'main/home.html', {'quote': quote, 'reviews':top_reviews})
+    return render(request, 'main/home.html', {'quote': quote, 'reviews':top_reviews, 'avg':avg, 'number':number})
 
 def about(request):
     return render(request, 'main/about.html')

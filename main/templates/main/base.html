@@ -14,11 +14,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     <style>
+        p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.3em;
+        }
         .nav-link{
             font-size: 0.9rem;
             font-weight: 500;
             margin: 0.15%;
         }
+        .blockquote-custom {
+            position: relative;
+            font-size: 1.1rem;
+          }
+          
+          .blockquote-custom-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -25px;
+            left: 50px;
+          }
         .nav-link:hover{
             color: #51ffc5;
         }
@@ -42,10 +62,13 @@
             padding-right: 7%;
             width: 100%;
         }
+        .team:hover{
+            border: 12px solid black;
+            transition-duration: 0.6s;
+        }
         .section1, .section3{
             box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
         }
-        
         .awesome {
             -webkit-animation:colorchange 8s infinite alternate;
           }
@@ -117,6 +140,7 @@
         }
     </style>
     <script>(function(w, d) { w.CollectId = "5f7a12a20f65cb31086fdf11"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
 </head>
 <body>
     {% block review %}
@@ -203,6 +227,13 @@
             </a>
         </li>
         </ul>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>   
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <a href="{% url 'privacy' %}">
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a class="footer-copyright text-center py-3"> PathaPadha.in</a>
