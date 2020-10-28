@@ -26,7 +26,10 @@
             <a class="nav-link reset-nav" data-toggle="tab" href="#menu4">ML/AI</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link reset-nav" data-toggle="tab" href="#menu5">Others</a>
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu5">WebDev</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reset-nav" data-toggle="tab" href="#menu6">Others</a>
           </li>
         </ul>
         <div class="tab-content">
@@ -72,6 +75,13 @@
             {% endfor %}
           </div>
           <div id="menu5" class="container tab-pane fade"><br>
+            {% for ele in webdev %}
+                <ul>
+                    <a href={{ele.link}}><li>{{ele.name}}</li></a>
+                </ul>
+            {% endfor %}
+          </div>
+          <div id="menu6" class="container tab-pane fade"><br>
             {% for ele in others %}
                 <ul>
                     <a href={{ele.link}}><li>{{ele.name}}</li></a>

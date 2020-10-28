@@ -1,8 +1,12 @@
 from django.contrib import admin
-from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes
+from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes, WebDev
 # Register your models here.
 @admin.register(Books)
 class BooksAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'link')
+
+@admin.register(WebDev)
+class WebDevAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'link')
 
 @admin.register(Python)

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes
+from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes, WebDev
 from django.core.mail import send_mail
 import random
 from django.contrib import messages
@@ -33,8 +33,9 @@ def resources(request):
     cplusplus = Cplusplus.objects.all()
     mlai = MLAI.objects.all()
     arduino = Arduino.objects.all()
+    webdev = WebDev.objects.all()
     others = Books.objects.all()
-    return render(request, 'main/resources.html', {'pythons':pythons, 'cplusplus': cplusplus, 'mlai':mlai,'arduino':arduino, "others":others})
+    return render(request, 'main/resources.html', {'pythons':pythons, 'cplusplus': cplusplus, 'mlai':mlai,'arduino':arduino, 'webdev':webdev, "others":others})
 
 def articles(request): 
     return render(request, 'main/articles.html')
