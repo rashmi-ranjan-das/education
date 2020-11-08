@@ -5,7 +5,6 @@ chardet==3.0.4
 colorama==0.4.3
 Django==3.0.8
 django-sendsms==0.4
-django-user-visit==0.4.1
 Dumper==1.2.0
 Faker==4.4.0
 gunicorn==20.0.4
