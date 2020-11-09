@@ -89,10 +89,8 @@
           <h2>Thought of the Moment</h2>
           <div class="text-center mt-4">
             <span><svg style="color: red;" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4zm4 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
-</svg> <span class="article-content"> Most Popular </span> <svg style="color: red;" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4zm4 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
-</svg></span>
+            <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4zm4 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/></svg> <span class="article-content"> Most Popular </span> <svg style="color: red;" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4zm4 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/></svg></span>
           </div>
           <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded" style="margin-top: 17%;">
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
@@ -102,20 +100,22 @@
             </footer>
           </blockquote>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-          <h2 class="text-center">Average Client Rating</h2>
-          <div class="text-center">
-            <h1 class="rating-num">
-              {{avg}}      <span><svg style="margin-bottom: 1.9%; color:gold" width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg></span></h1>
-            <div class="rating">
-              &nbsp;&nbsp;<svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg> <b> {{number}} </b> 
-            </div>
-        </div>
 
+
+        {% if number != '0' %}
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <h2 class="text-center">Average Client Rating</h2>
+            <div class="text-center">
+              <h1 class="rating-num">
+                {{avg}}      <span><svg style="margin-bottom: 1.9%; color:gold" width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg></span></h1>
+              <div class="rating">
+                &nbsp;&nbsp;<svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> <b> {{number}} </b> 
+              </div>
+          </div>
           <div class="list-group">
               {% for review in reviews %}
               <div href="#" class="list-group-item list-group-item-action mt-4" style="background-color:lavender;">
@@ -139,6 +139,18 @@
             <a href="{% url 'review_page' %}"><div class="btn btn-primary">See More</div></a>
           </div>
         </div>
+        {% else %}
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+          <h2 class="text-center">Average Client Rating</h2>
+          <div class="text-center" style="margin-top: 17%;">
+            <h4><i>There are no reviews yet. Please take your time and leave us a valuable feedback.</i></h4>
+          </div>
+          <div class="text-center" style="margin-top: 14%;">
+            <a href="{% url 'review_page' %}"><div class="btn btn-primary">Give Review</div></a>
+          </div>
+        </div>
+        {% endif %}
+
     </div>
 </div>
 </div>
