@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes, WebDev
+from .models import Books, Python, Cplusplus, MLAI, Reviews, Arduino, Quotes, WebDev, Feedback
 # Register your models here.
 @admin.register(Books)
 class BooksAdmin(admin.ModelAdmin):
@@ -32,3 +32,7 @@ class ReviewAdmin(admin.ModelAdmin):
 @admin.register(Quotes)
 class QuotesAdmin(admin.ModelAdmin):
     list_display = ('id','quote', 'name',)
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'email', 'number' , 'address', 'education', 'feedback')

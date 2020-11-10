@@ -37,3 +37,10 @@ class Quotes(models.Model):
     name = models.CharField(max_length=40)
     quote = models.CharField(max_length=1000)
 
+class Feedback(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    address = models.CharField(max_length=1000)
+    number = models.IntegerField()
+    education = models.CharField(max_length=100)
+    feedback = models.CharField(max_length=1000)
