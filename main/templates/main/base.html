@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XQWHBNTS9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XQWHBNTS9');
+    </script>
     <style>
         p{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,7 +45,7 @@
             position: relative;
             font-size: 1.1rem;
           }
-          
+
           .blockquote-custom-icon {
             width: 50px;
             height: 50px;
@@ -77,67 +86,66 @@
         .awesome {
             -webkit-animation:colorchange 8s infinite alternate;
           }
-      
+
           @-webkit-keyframes colorchange {
             0% {
-              
+
               color: blue;
             }
-            
+
             10% {
-              
+
               color: #8e44ad;
             }
-            
+
             20% {
-              
+
               color: cornflowerblue;
             }
-            
+
             30% {
-              
+
               color: darkblue;
             }
-            
+
             40% {
-              
+
               color:darkmagenta;
             }
-            
+
             50% {
-              
+
               color: #783c9b;
             }
-            
+
             60% {
-              
+
               color: blue;
             }
-            
+
             70% {
-              
+
               color: #2980b9;
             }
             80% {
-           
+
               color:royalblue;
             }
-            
+
             90% {
-           
+
               color: darkblue;
             }
-            
+
             100% {
-              
+
               color: darkcyan;
             }
           }
         @media only screen and (max-width: 559px){
             .d-block{
-                height: 25rem;
+                height: 22rem;
             }
-        }
         @media only screen and (max-width: 989px){
             .testimonial-btn{
                 margin-bottom: 15rem;
@@ -154,9 +162,9 @@
         <div class="container">
             <a class="navbar-brand logo ml-3" href="/">PathaPadha.in</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;">
-                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
-                </svg>
+                <svg style="color:white;" width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -172,12 +180,14 @@
             </div>
         </div>
       </nav>
-      
+
       {% block content %}
 
       {% endblock %}
       <div class="container mt-3 mb-4 text-center">
-        <h3>Like Us? Give your honest reviews here :)<span><a href="{% url 'review_page' %}"><button class="btn btn-primary">Give Review</button></a></span></h3>
+        <h3>Like Us? Give your honest reviews here <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c.552 0 1-.672 1-1.5S10.552 5 10 5s-1 .672-1 1.5S9.448 8 10 8z"/>
+</svg><span><a href="{% url 'review_page' %}"><button class="btn btn-primary">Give Review</button></a></span></h3>
     </div>
  <div class="container-fluid footer" style="background-color: black; color: white">
     <footer class="page-footer font-small stylish-color-dark pt-4">
@@ -190,7 +200,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4">
                   <img src="https://res.cloudinary.com/pathapadha-in/image/upload/v1603477015/Resources/circle-cropped_f7sgrb.png" alt="" style="height: 25%; width:27%">
                     <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">PathaPadha.in</h5>
-                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">ପାଠପଢା.in</h5>
+                    <h5 class="font-weight-bold text-uppercase" style="margin: 10%; color: #51ffc5">ପାଠପଢା.ଇନ୍</h5>
                     <h5 class="font-weight-bold text-uppercase">Help us grow by donating</h5>
                     <a href="{% url 'donation' %}"><div class="btn btn-success btn-lg">Donate Us</div></a>
                     <a href="https://onboarding.payumoney.com/app/account?partner_name=PathaPadha&partner_source=Affiliate+Links&partner_uuid=11eb-05c0-781afeca-a81b-0a696b110fde&source=Partner" target="_blank"><img width="100px" height="100px" src="https://partner.payu.in/packs/_/assets/images/icons/certified-partner-ce70c676cc844c678e8a6e7e373e6c0d.png" /></a>
@@ -238,7 +248,7 @@
         function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
-        </script>   
+        </script>
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <a href="{% url 'privacy' %}">
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
